@@ -1,0 +1,73 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SUDS",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#labels"
+		},
+		{
+			"include": "#choices"
+		}		
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.suds",
+				"match": "\\[(if|else|else if|endif|goto|go to|get|set)\\b"
+			},
+			{
+				"name": "keyword.other.suds",
+				"match": "^\\W*(\\w+)\\:"
+
+			},
+			{
+				"name": "keyword.type.suds",
+				"match": "\\b(string|int|float|bool)\\b"
+
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.suds",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.suds",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.suds",
+				"begin": "^\\s*#",
+				"end": "$"
+			}]
+		},
+		"labels": {
+			"patterns": [{
+				"name": "storage.type.class.suds",
+				"begin": "\\s*:",
+				"end": "$"
+			}]
+		},
+		"choices": {
+			"patterns": [{
+				"name": "entity.name.function.suds",
+				"match": "^\\s*\\*\\s+.+$"
+			}]
+		}
+
+
+	},
+	"scopeName": "source.sud"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "suds-code",
+  "displayName": "SUDS-code",
+  "description": "Support for SUDS script",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "suds",
+      "aliases": ["SUDS", "suds"],
+      "extensions": [".sud"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "suds",
+      "scopeName": "source.sud",
+      "path": "./syntaxes/suds.tmLanguage.json"
+    }]
+  }
+}
