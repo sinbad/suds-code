@@ -51,6 +51,10 @@
 				"name": "comment.line.suds",
 				"begin": "^\\s*#",
 				"end": "$"
+			},
+			{
+				"name": "comment.block.lineId.suds",
+				"match": "\\@[0-9a-fA-F]+\\@"
 			}]
 		},
 		"labels": {
