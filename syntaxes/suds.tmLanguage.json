@@ -15,6 +15,9 @@
 			"include": "#labels"
 		},
 		{
+			"include": "#params"
+		},
+		{
 			"include": "#choices"
 		}		
 	],
@@ -68,6 +71,12 @@
 			"patterns": [{
 				"name": "entity.name.function.suds",
 				"match": "^\\s*\\*\\s+[^\\@]+"
+			}]
+		},
+		"params": {
+			"patterns": [{
+				"name": "variable.language.suds",
+				"match": "\\{\\w+}(\\|(plural|gender)\\(.*\\))?"
 			}]
 		}
 
