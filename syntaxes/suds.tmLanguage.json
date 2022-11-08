@@ -3,10 +3,19 @@
 	"name": "SUDS",
 	"patterns": [
 		{
+			"include": "#headers"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#symbols"
 		},
 		{
 			"include": "#comments"
@@ -22,6 +31,12 @@
 		}		
 	],
 	"repository": {
+		"headers": {
+			"patterns": [{
+				"name": "entity.other.attribute-name",
+				"match": "^===\\s*$"
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.suds",
@@ -48,6 +63,22 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "\\d+"
+			}]
+		},
+		"symbols": {
+			"patterns": [{
+				"name": "keyword.operator",
+				"match": "[\\+\\/\\-\\*]"
+			},
+			{
+				"name": "keyword.control",
+				"match": "[\\[\\]]"
+			}]
 		},
 		"comments": {
 			"patterns": [{
