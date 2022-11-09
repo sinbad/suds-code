@@ -28,7 +28,7 @@
 		},
 		{
 			"include": "#choices"
-		}		
+		}
 	],
 	"repository": {
 		"headers": {
@@ -51,6 +51,11 @@
 				"name": "keyword.type.suds",
 				"match": "\\b(string|int|float|bool)\\b"
 
+			},
+			{
+				"name": "constant.language.suds",
+				"match": "\\b([tT]rue|[fF]alse|[mM]asculine|[fF]eminine|[nN]euter)\\b"
+
 			}]
 		},
 		"strings": {
@@ -67,7 +72,7 @@
 		"numbers": {
 			"patterns": [{
 				"name": "constant.numeric",
-				"match": "\\d+"
+				"match": "\\d+(\\.\\d+)?"
 			}]
 		},
 		"symbols": {
