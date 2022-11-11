@@ -113,6 +113,10 @@
 			"patterns": [{
 				"name": "variable.language.suds",
 				"match": "\\{\\w+}(\\|(plural|gender)\\(.*\\))?"
+			},
+			{
+				"name": "variable.parameter.suds",
+				"match": "\\<(\\w+|\\/)\\>"
 			}]
 		}
 
