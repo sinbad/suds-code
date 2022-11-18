@@ -40,7 +40,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.suds",
-				"match": "\\[(if|else|else if|endif|goto|go to|set)\\b"
+				"match": "\\[(if|else|elseif|endif|goto|go to|set|event)\\b"
 			},
 			{
 				"name": "keyword.other.suds",
