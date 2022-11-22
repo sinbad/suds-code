@@ -78,7 +78,11 @@
 		"symbols": {
 			"patterns": [{
 				"name": "keyword.operator",
-				"match": "[\\+\\/\\-\\*]"
+				"match": "[\\+\\/\\-\\*\\!]"
+			},
+			{
+				"name": "keyword.operator",
+				"match": "(and|or|&&|\\|\\||not)"
 			},
 			{
 				"name": "keyword.control",
