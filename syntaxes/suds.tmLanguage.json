@@ -41,7 +41,7 @@
 			"patterns": [{
 				"name": "keyword.control.suds",
 				"begin": "\\[(if|else|elseif|endif|goto|go to|set|event)\\b",
-				"while": "^(\\])",
+				"end": "\\]",
 				"patterns": [
 					{
 						"include": "#symbols"
