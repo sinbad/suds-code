@@ -60,6 +60,10 @@
 					},
 					{
 						"include": "#variables"
+					},
+					{
+						"name": "variable.language.suds",
+						"match": "\\b\\S+\\b"
 					}
 
 				]
