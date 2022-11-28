@@ -44,6 +44,9 @@
 				"end": "\\]",
 				"patterns": [
 					{
+						"include": "#operators"
+					},
+					{
 						"include": "#symbols"
 					},
 					{
