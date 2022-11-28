@@ -40,7 +40,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.suds",
-				"begin": "\\[(if|else|elseif|endif|goto|go to|set|event)\\b",
+				"begin": "\\[(if|else|elseif|endif|set|event)\\b",
 				"end": "\\]",
 				"patterns": [
 					{
@@ -67,6 +67,19 @@
 					}
 
 				]
+			},
+			{
+				"name": "keyword.control.suds",
+				"begin": "\\[(goto|go to)\\b",
+				"end": "\\]",
+				"patterns": [
+					{
+						"name": "storage.type.class.suds",
+						"match": "\\b\\S+\\b"
+					}
+
+				]
+
 			},
 			{
 				"name": "keyword.other.suds",
