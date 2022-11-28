@@ -103,7 +103,7 @@
 		"labels": {
 			"patterns": [{
 				"name": "storage.type.class.suds",
-				"begin": "\\s*:",
+				"begin": "^\\s*:",
 				"end": "$"
 			}]
 		},
