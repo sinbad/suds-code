@@ -6,13 +6,10 @@
 			"include": "#headers"
 		},
 		{
+			"include": "#commands"
+		},
+		{
 			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#numbers"
 		},
 		{
 			"include": "#symbols"
@@ -24,7 +21,10 @@
 			"include": "#labels"
 		},
 		{
-			"include": "#params"
+			"include": "#markup"
+		},
+		{
+			"include": "#variables"
 		},
 		{
 			"include": "#choices"
@@ -40,7 +40,29 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.suds",
-				"match": "\\[(if|else|elseif|endif|goto|go to|set|event)\\b"
+				"begin": "\\[(if|else|elseif|endif|goto|go to|set|event)\\b",
+				"while": "^(\\])",
+				"patterns": [
+					{
+						"include": "#symbols"
+					},
+					{
+						"include": "#params"
+					},
+					{
+						"include": "#numbers"
+					},
+					{
+						"include": "#strings"
+					},
+					{
+						"include": "#constants"
+					},
+					{
+						"include": "#variables"
+					}
+
+				]
 			},
 			{
 				"name": "keyword.other.suds",
@@ -51,12 +73,16 @@
 				"name": "keyword.type.suds",
 				"match": "\\b(string|int|float|bool)\\b"
 
-			},
+			}]
+		},
+		"constants":{
+			"patterns": [
 			{
 				"name": "constant.language.suds",
 				"match": "\\b([tT]rue|[fF]alse|[mM]asculine|[fF]eminine|[nN]euter)\\b"
 
-			}]
+			}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.suds",
@@ -75,15 +101,20 @@
 				"match": "\\d+(\\.\\d+)?"
 			}]
 		},
+		"operators":{
+			"patterns": [
+				{
+					"name": "keyword.operator",
+					"match": "[\\+\\/\\-\\*\\!]"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "\\b(and|or|&&|\\|\\||not)\\b"
+				}
+			]
+		},
 		"symbols": {
-			"patterns": [{
-				"name": "keyword.operator",
-				"match": "[\\+\\/\\-\\*\\!]"
-			},
-			{
-				"name": "keyword.operator",
-				"match": "(and|or|&&|\\|\\||not)"
-			},
+			"patterns": [
 			{
 				"name": "keyword.control",
 				"match": "[\\[\\]]"
@@ -113,11 +144,16 @@
 				"match": "^\\s*\\*\\s+[^\\@]+"
 			}]
 		},
-		"params": {
-			"patterns": [{
-				"name": "variable.language.suds",
-				"match": "\\{\\w+}(\\|(plural|gender)\\(.*\\))?"
-			},
+		"variables":{
+			"patterns": [
+				{
+					"name": "variable.language.suds",
+					"match": "\\{\\w+}(\\|(plural|gender)\\(.*\\))?"
+				}
+			]
+		},
+		"markup": {
+			"patterns": [
 			{
 				"name": "variable.parameter.suds",
 				"match": "\\<(\\w+|\\/)\\>"
