@@ -1,5 +1,5 @@
 # Change Log
 
-## [0.0.1]
+## [1.0.0]
 
-- Basic syntax highlighting for the .sud format
+- Syntax highlighting for the .sud format

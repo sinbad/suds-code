@@ -3,6 +3,9 @@
   "displayName": "SUDS for VSCode",
   "description": "Support for SUDS (Steve's Unreal Dialogue System) script",
   "version": "1.0.0",
+  "publisher": "Steve Streeting",
+  "icon": "img/Icon128.png",
+  "keywords": ["suds", "unreal", "ue5", "dialogue"],
   "repository": {
     "type": "Git",
     "url": "https://github.com/sinbad/suds-code.git"
