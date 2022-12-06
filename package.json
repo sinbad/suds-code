@@ -2,7 +2,7 @@
   "name": "suds-code",
   "displayName": "SUDS-code",
   "description": "Support for SUDS script",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "Git",
     "url": "https://github.com/sinbad/suds-code.git"
