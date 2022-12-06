@@ -59,6 +59,9 @@
 						"include": "#strings"
 					},
 					{
+						"include": "#names"
+					},
+					{
 						"include": "#constants"
 					},
 					{
@@ -108,6 +111,17 @@
 			"name": "string.quoted.double.suds",
 			"begin": "\"",
 			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.suds",
+					"match": "\\\\."
+				}
+			]
+		},
+		"names": {
+			"name": "constant.other",
+			"begin": "`",
+			"end": "`",
 			"patterns": [
 				{
 					"name": "constant.character.escape.suds",
