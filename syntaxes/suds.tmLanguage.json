@@ -182,7 +182,7 @@
 			"patterns": [
 				{
 					"name": "variable.language.suds",
-					"match": "\\{\\w+}(\\|(plural|gender)\\(.*\\))?"
+					"match": "\\{[\\w\\.]+}(\\|(plural|gender)\\(.*\\))?"
 				}
 			]
 		},
