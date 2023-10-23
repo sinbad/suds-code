@@ -175,7 +175,7 @@
 		"choices": {
 			"patterns": [{
 				"name": "entity.name.function.suds",
-				"match": "^\\s*\\*\\s+[^\\@]+"
+				"match": "^\\s*\\*\\-?\\s+[^\\@]+"
 			}]
 		},
 		"variables":{
