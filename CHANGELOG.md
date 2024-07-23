@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.4]
+
+- Add syntax highlighting for random / or / endrandom
+
+## [1.0.3]
+
+- Support choices as speaker lines options
+
 ## [1.0.2]
 
 - Add syntax highlighting for gosub / return feature
